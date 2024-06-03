@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  outline: none;
+  font-family: "Poppins";
+}
+
+body {
+
+  height: 100vh;
+  background-image: url(../assets/pexels-sebastians-1276518.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  height: 70px;
+  box-shadow: 1px 2px 3px rgba(245, 245, 245, 0.24);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.header .nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+
+}
+
+.header .nav ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem;
+  padding: 1rem;
+
+}
+
+.aboutSec {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.about h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  padding: 4rem;
+  padding-bottom: 2rem;
+}
+
+.about h1 span {
+  color: #1FC256;
+}
+
+.about p {
+  color: #ffffff;
+  font-size: 2.2rem;
+}
+
+.about a {
+  color: #000000;
+  margin: 2rem;
+  font-size: 1.5rem;
+  background-color: #1FC256;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+
+}
+
+.about a:hover i {
+  transform: translateY(0px);
+  animation: float 0.9s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+.blogSec h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.CreatePostbtn {
+  text-align: center;
+  font-size: 1.7rem;
+  background-color: #1FC256;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem;
+  cursor: pointer;
+  max-width: 300px;
+  margin: auto;
+}
+
+.blogSec .PostOrganization {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+}
+
+.post {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 350px;
+  max-height: 100%;
+  margin: 4rem auto;
+
+}
+
+.post h3 {
+  font-size: 1rem;
+}
+
+.post .author {
+  border-top: 2px solid rgba(107, 103, 103, 0.219);
+  border-bottom: 2px solid rgba(107, 103, 103, 0.219);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+
+}
+
+.post .author h4,
+p {
+  font-size: 0.9rem;
+}
+
+.post img {
+  width: 100%;
+  
+}
+
+.post .MorePostBtn {
+  display: flex;
+ align-items: end;
+ height: 100%;
+
+}
+
+.post .MorePostBtn button {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #1FC256;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+/* AREA DE ADICIONAR UM NOVO POST */
+
+.NewPost {
+
+  display: none;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+}
+
+.NewPost form {
+  width: 85%;
+  z-index: 99;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.911);
+}
+
+.NewPost  label {
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.INPUTS{
+  color: #000000;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  border: 1.4px solid grey;
+  min-width: 100vh;
+  
+}
+
+.TEXTAREA {
+  color: #000000;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+  border: 1.4px solid grey;
+  height: 250px;
+  resize: none;
+  width: 100%;
+}
+
+.picture_input {
+  display: none;
+}
+
+.picture {
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd;
+  color: #aaa;
+  border: 2px dashed #aaa;
+  cursor: pointer;
+  transition: color 200ms ease-in-out, background 200ms ease-in-out;
+}
+
+.picture_img{
+  max-width: 100%;
+
+}
+.picture:hover {
+  color: #777;
+  background: #ccc;
+}
+
+.NewPost .ButtonsSaveCalcel {
+  padding-top: 1.5rem;
+  text-align: center;
+
+}
+
+.NewPost .ButtonsSaveCalcel button {
+  color: #fff;
+  border: none;
+  background-color: #5072f0;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  margin: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.NewPost .ButtonsSaveCalcel .red {
+  background-color: red;
+}
+
+.NewPost .ButtonsSaveCalcel button:hover {
+  opacity: 0.9;
+}
+
+article {
+  position: relative;
+  height: 100vh;
+}
+
+aside {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 95%;
+  z-index: 99;
+}
+
+.postExtended {
+  display: block;
+  margin: 2rem 0 2.5rem auto;
+  max-width: 80%;
+  background-color: #ffffff;
+  border-radius: 1rem 0 0 1rem;
+  font-family: "Poppins";
+  box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.911);
+  z-index: 99;
+  overflow-x: scroll;
+
+
+}
+
+.postExtended h2 {
+  color: #000000;
+  font-size: 2.3rem;
+  text-align: left;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.ToolsPostIcons {
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: #fff;
+  margin: 2rem auto 2.45rem 0;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #aaa;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  
+}
+
+#trash {
+  right: 60px;
+}
+.ToolsPostIcons i {
+ 
+  transition: all 0.1s ease-in-out;
+}
+
+
+.ToolsPostIcons i:hover {
+  color: rgb(0, 0, 0);
+  transform: scale(1.2);
+}
+
+.postExtended .authorExtended {
+  border-top: 2px solid rgba(107, 103, 103, 0.219);
+  border-bottom: 2px solid rgba(107, 103, 103, 0.219);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0rem 0.5rem;
+  width: 100%;
+}
+
+.postExtended .content {
+  text-align: justify;
+  padding: 1rem;
+}
+
+.postExtended .content p {
+  font-size: 1.2rem;
+}
+
+.postExtended .img {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+ 
+}
+
+.postExtended .img img {
+  width: 50%
+
+}
+
+.divSaveBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.SaveUpBtn{
+  display: none;
+  justify-content: center;
+  color: #fff;
+  border: none;
+  background-color: #5072f0;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 1rem;
+}
+
+
+
+@media screen and (max-width:768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .about h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 1rem 0;
+
+  }
+
+  .about p {
+    color: #ffffff;
+    font-size: 1.3rem;
+  }
+
+  .blogSec .PostOrganization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .NewPost form {
+    width: 100%;
+  }
+
+  .picture {
+    width: 100%;
+  }
+
+  .ToolsPostIcons {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 0;
+    width: 100%;
+    margin-top: 5rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  aside {
+
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 10vh;
+
+  }
+
+  .postExtended .ToolsPostIcons i {
+    padding: 1rem;
+  }
+
+  .postExtended {
+    margin-top: 0rem;
+    border-radius: 0 0 1rem 1rem;
+    min-width: 100%;
+
+  }
+
+  .postExtended h2 {
+    color: #000000;
+    width: 100%;
+    font-size: 2.3rem;
+  }
+
+  .postExtended .img img {
+    width: 100%;
+
+  }
+}
+
+@media screen and (max-width:320px) {
+  .about {
+    margin-bottom: 7rem;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .about {
+    margin-bottom: 7rem;
+  }
+}

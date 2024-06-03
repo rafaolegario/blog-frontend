@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <title>Blog - Bate Papo</title>
+   </head>
+   <body>
+      <header class="header">
+         <nav class="nav">
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#blog">Blog</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <section id="home" class="aboutSec">
+            <div class="about">
+               <h1>What is the <span>ecosystem </span> and why should we preserve it?</h1>
+               <p>
+                  The environment is everything that surrounds us: nature, animals, plants, air and water. Preserving
+                  it is essential to guarantee the quality of life for future generations.
+               </p>
+               <a href="#blog">View More <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+         </section>
+         <section id="blog" class="blogSec">
+            <h2>POSTS</h2>
+            <div class="CreatePostbtn">Add new Post <i class="fa-solid fa-plus"></i></div>
+            <div class="NewPost">
+               <form id="formNewPost" enctype="multipart/form-data" method="post">
+                  <label class="picture">
+                  <input type="file" id="imgFile"class="picture_input"  >
+                  <span class="picture_image">
+                  </span>
+                  </label>
+                  <label for="title">Title:</label>
+                  <input type="text" id="title" class="INPUTS" required>
+                  <label for="author">Author:</label>
+                  <input type="text" id="author" class="INPUTS" required>
+                  <label for="content">Content:</label>
+                  <textarea id="content" class="TEXTAREA">
+                  </textarea required>
+                  <div class="ButtonsSaveCalcel">
+                     <button type="submit">Save</button>
+                     <button class="red" type="button">Cancel</button>
+                  </div>
+               </form>
+            </div>
+            <article>
+               <aside id="Aside">
+                
+               </aside>
+
+
+               <div class="PostOrganization">
+               </div>
+            </article>
+         </section>
+      </main>
+      <script src="js/script.js"></script>
+   </body>
+</html>
