@@ -37,7 +37,7 @@ InputPicture.addEventListener('change', (e) =>{
 })
 
 const fetchPosts = async (event) => {
-    const response = await fetch('https://blog-backend-production-2377.up.railway.app/posts')
+    const response = await fetch('https://blog-backend-production-33bb.up.railway.app/posts')
     const posts = await response.json()
     return posts
 }
@@ -51,7 +51,7 @@ const addPost = async (event) =>{
         content: InputContent.value,
         picture: imageResult
     }
-    await fetch ('https://blog-backend-production-2377.up.railway.app/posts', {
+    await fetch ('https://blog-backend-production-33bb.up.railway.app/posts', {
         method:'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(post)
@@ -67,7 +67,7 @@ const addPost = async (event) =>{
 
 const updatePost = async ({ID, title, author, content, picture}) =>{
 
-    await fetch (`http://localhost:3333/posts/${ID}`, {
+    await fetch (`https://blog-backend-production-33bb.up.railway.app/posts/${ID}`, {
         method:'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({title, author, content, picture})
@@ -83,7 +83,7 @@ const updatePost = async ({ID, title, author, content, picture}) =>{
 
 const deletePost = async (id) => {
     
-     await fetch (`https://blog-backend-production-2377.up.railway.app/posts/${id}`, {
+     await fetch (`https://blog-backend-production-33bb.up.railway.app/posts/${id}`, {
         method:'DELETE'
      })
     window.location.reload(true);
@@ -107,7 +107,7 @@ const createElement = (tag, innerText = '', innerHTML = '') =>{
 }
 
 const smallPost = (post) => {
-    const {ID, title, author, picture} = post
+    const { title, author, picture} = post
 
     const divPost = createElement('div')
     const divImg = createElement('div')
@@ -149,7 +149,7 @@ const smallPost = (post) => {
 }
 
 const postExtended = (post) =>{
-    const {ID, title, author,content, picture, codigo} = post
+    const {id, title, author,content, picture, codigo} = post
     const aside = document.querySelector('#Aside')
     const divExtendedPost = createElement('div')
     const titleExtend = createElement('h2')
@@ -209,10 +209,10 @@ const postExtended = (post) =>{
     })
 
     iconDel.addEventListener('click', () =>{
-        const id = parseInt(prompt('Digite seu ID para excluir POST:'))
+        const ID = parseInt(prompt('Digite seu ID para excluir POST:'))
 
-        if(id == codigo){
-            deletePost(ID)
+        if(ID == codigo){
+            deletePost(id)
         }else{
             alert('ID incorreto ou invalido')
         }
